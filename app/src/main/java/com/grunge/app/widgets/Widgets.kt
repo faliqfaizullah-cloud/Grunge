@@ -20,7 +20,7 @@ import com.grunge.app.R
 import com.grunge.app.Store
 import java.util.Calendar
 
-private fun t(fg: Color, size: Int, bold: Boolean = false, mono: Boolean = false, serif: Boolean = false) = TextStyle(
+internal fun t(fg: Color, size: Int, bold: Boolean = false, mono: Boolean = false, serif: Boolean = false) = TextStyle(
     color = ColorProvider(fg), fontSize = size.sp,
     fontWeight = if (bold) FontWeight.Bold else FontWeight.Normal,
     fontFamily = if (mono) FontFamily.Monospace else if (serif) FontFamily.Serif else FontFamily.SansSerif)
@@ -100,16 +100,3 @@ class QuoteWidget : GrungeWidget("quote", "#FFFFFF", "#111111") {
     }
 }
 
-// 6 ─ Next flight board (stretchable, editable)
-class FlightWidget : GrungeWidget("flight", "#1C1C1E", "#F2F2F2") {
-    @Composable override fun Body(ctx: Context, fg: Color) {
-        Column(GlanceModifier.fillMaxSize()) {
-            Text("Next flight", style = t(fg, 13, true))
-            Text(Store.get(ctx, "flight.route", "Tokyo - London"), style = t(fg.copy(alpha = .5f), 10))
-            Spacer(GlanceModifier.defaultWeight())
-            Text(Store.get(ctx, "flight.dest", "TOKYO").uppercase(), style = t(fg, 18, true, mono = true))
-            Text(Store.get(ctx, "flight.date", "15 JAN").uppercase(), style = t(fg, 18, true, mono = true))
-            Text(Store.get(ctx, "flight.time", "13:30"), style = t(fg, 18, true, mono = true))
-        }
-    }
-}

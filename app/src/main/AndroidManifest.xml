@@ -14,6 +14,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".MediaListener" android:exported="true" android:label="Grunge media"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter><action android:name="android.service.notification.NotificationListenerService" /></intent-filter>
+        </service>
         <receiver android:name=".widgets.WeatherReceiver" android:exported="true" android:label="Grunge · Weather">
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_weather" />
@@ -37,6 +41,46 @@
         <receiver android:name=".widgets.FlightReceiver" android:exported="true" android:label="Grunge · Next Flight">
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_flight" />
+        </receiver>
+        <receiver android:name=".widgets.CityWeatherReceiver" android:exported="true" android:label="Grunge · Weather Text">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_cityweather" />
+        </receiver>
+        <receiver android:name=".widgets.MeetingReceiver" android:exported="true" android:label="Grunge · Meeting">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_meeting" />
+        </receiver>
+        <receiver android:name=".widgets.StopwatchReceiver" android:exported="true" android:label="Grunge · Stopwatch">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_stopwatch" />
+        </receiver>
+        <receiver android:name=".widgets.ProfileReceiver" android:exported="true" android:label="Grunge · Profile">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_profile" />
+        </receiver>
+        <receiver android:name=".widgets.ContactReceiver" android:exported="true" android:label="Grunge · Contact">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_contact" />
+        </receiver>
+        <receiver android:name=".widgets.DroneReceiver" android:exported="true" android:label="Grunge · Drone Battery">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_drone" />
+        </receiver>
+        <receiver android:name=".widgets.BalanceReceiver" android:exported="true" android:label="Grunge · Balance Card">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_balance" />
+        </receiver>
+        <receiver android:name=".widgets.UsdcReceiver" android:exported="true" android:label="Grunge · USDC">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_usdc" />
+        </receiver>
+        <receiver android:name=".widgets.MusicReceiver" android:exported="true" android:label="Grunge · Now Playing">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_music" />
+        </receiver>
+        <receiver android:name=".widgets.LampReceiver" android:exported="true" android:label="Grunge · Lamp">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_lamp" />
         </receiver>
     </application>
 </manifest>
