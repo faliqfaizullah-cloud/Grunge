@@ -82,5 +82,49 @@
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_lamp" />
         </receiver>
+        <receiver android:name=".widgets.SignOneAvReceiver" android:exported="true" android:label="Grunge · Sign 1 Av">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_sign1av" />
+        </receiver>
+        <receiver android:name=".widgets.SignUnionSqReceiver" android:exported="true" android:label="Grunge · Sign 14 St-Union Sq">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_signunion" />
+        </receiver>
+        <receiver android:name=".widgets.SignRawsonReceiver" android:exported="true" android:label="Grunge · Sign 33 St-Rawson St">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_signrawson" />
+        </receiver>
+        <receiver android:name=".widgets.SignOneZeroFourReceiver" android:exported="true" android:label="Grunge · Sign 104 St">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_sign104" />
+        </receiver>
+        <receiver android:name=".widgets.SignAlabamaReceiver" android:exported="true" android:label="Grunge · Sign Alabama Av">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_signalabama" />
+        </receiver>
+        <receiver android:name=".widgets.SignBronxReceiver" android:exported="true" android:label="Grunge · Sign 3 Av-149 St">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_sign149" />
+        </receiver>
+        <receiver android:name=".widgets.MetroCardReceiver" android:exported="true" android:label="Grunge · MetroCard">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_metrocard" />
+        </receiver>
+        <receiver android:name=".widgets.CreditReceiver" android:exported="true" android:label="Grunge · Add Credit">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_credit" />
+        </receiver>
+        <receiver android:name=".widgets.TicketReceiver" android:exported="true" android:label="Grunge · Single Ticket">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_ticket" />
+        </receiver>
+        <receiver android:name=".widgets.TypefaceReceiver" android:exported="true" android:label="Grunge · Typeface">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_typeface" />
+        </receiver>
+        <receiver android:name=".widgets.DirectionReceiver" android:exported="true" android:label="Grunge · Direction Sign">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_direction" />
+        </receiver>
     </application>
 </manifest>

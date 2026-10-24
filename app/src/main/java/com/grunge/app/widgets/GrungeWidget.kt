@@ -17,7 +17,7 @@ import androidx.glance.layout.padding
 import com.grunge.app.Store
 
 /** Every Grunge widget: 2x2 cell, 28dp corners, user-customisable colours. */
-abstract class GrungeWidget(val kind: String, val defBg: String, val defFg: String, val bgRes: Int? = null) : GlanceAppWidget() {
+abstract class GrungeWidget(val kind: String, val defBg: String, val defFg: String, val bgRes: Int? = null, val pad: Int = 14) : GlanceAppWidget() {
     @Composable abstract fun Body(ctx: Context, fg: Color)
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
@@ -26,7 +26,7 @@ abstract class GrungeWidget(val kind: String, val defBg: String, val defFg: Stri
         val r = bgRes
         provideContent {
             val base = GlanceModifier.fillMaxSize()
-            val m = (if (r != null) base.background(ImageProvider(r)) else base.background(bg)).cornerRadius(28.dp).padding(14.dp)
+            val m = (if (r != null) base.background(ImageProvider(r)) else base.background(bg)).cornerRadius(28.dp).padding(pad.dp)
             Box(m) { Body(context, fg) }
         }
     }

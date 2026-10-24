@@ -46,6 +46,17 @@ private val entries = listOf(
     Entry("USDC", UsdcWidget(), listOf(Field("usdc.fg", "Text #hex", "#111111"), Field("usdc.amount", "Amount", "987.86"), Field("usdc.change", "Change", "-99.56"))),
     Entry("Now playing", MusicWidget(), colors("music", "#4A4A4A", "#FFFFFF")),
     Entry("Lamp", LampWidget(), colors("lamp", "#1E1E1E", "#FFFFFF")),
+    Entry("Sign: 1 Av", SignOneAvWidget(), colors("sign1av", "#FFFFFF", "#111111") + listOf(Field("sign1av.name", "Station", "1 Av"), Field("sign1av.lines", "Lines (space separated)", "L"))),
+    Entry("Sign: 14 St - Union Sq", SignUnionSqWidget(), colors("signunion", "#000000", "#FFFFFF") + listOf(Field("signunion.name", "Station", "14 St - Union Sq"), Field("signunion.lines", "Lines (space separated)", "L N Q R 4 5 6"))),
+    Entry("Sign: 33 St - Rawson St", SignRawsonWidget(), colors("signrawson", "#000000", "#FFFFFF") + listOf(Field("signrawson.name", "Station", "33 St - Rawson St"), Field("signrawson.lines", "Lines (space separated)", "7"))),
+    Entry("Sign: 104 St", SignOneZeroFourWidget(), colors("sign104", "#FFFFFF", "#111111") + listOf(Field("sign104.name", "Station", "104 St"), Field("sign104.lines", "Lines (space separated)", "A"))),
+    Entry("Sign: Alabama Av", SignAlabamaWidget(), colors("signalabama", "#FFFFFF", "#111111") + listOf(Field("signalabama.name", "Station", "Alabama Av"), Field("signalabama.lines", "Lines (space separated)", "J"))),
+    Entry("Sign: 3 Av - 149 St", SignBronxWidget(), colors("sign149", "#FFFFFF", "#111111") + listOf(Field("sign149.name", "Station", "3 Av - 149 St"), Field("sign149.lines", "Lines (space separated)", "2 5"))),
+    Entry("MetroCard", MetroCardWidget(), listOf(Field("metrocard.fg", "Text #hex", "#111111"))),
+    Entry("Add credit", CreditWidget(), colors("credit", "#FFFFFF", "#111111")),
+    Entry("Single ticket", TicketWidget(), colors("ticket", "#FFFFFF", "#111111") + listOf(Field("ticket.line", "Line", "1"), Field("ticket.mins", "Minutes", "60'"))),
+    Entry("Typeface", TypefaceWidget(), colors("typeface", "#000000", "#FFFFFF")),
+    Entry("Direction sign", DirectionWidget(), colors("direction", "#000000", "#FFFFFF") + listOf(Field("direction.left", "Left (use / for new line)", "Penn/Station"), Field("direction.right", "Right (use / for new line)", "34 St./7 Ave"))),
 )
 private fun colors(k: String, bg: String, fg: String) =
     listOf(Field("$k.bg", "Background #hex", bg), Field("$k.fg", "Text #hex", fg))
