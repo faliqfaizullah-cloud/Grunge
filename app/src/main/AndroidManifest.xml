@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
+    <queries>
+        <package android:name="com.spotify.music" />
+        <package android:name="com.google.android.apps.fitness" />
+        <package android:name="com.android.vending" />
+        <package android:name="com.google.android.apps.healthdata" />
+        <package android:name="com.google.android.deskclock" />
+    </queries>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
@@ -125,6 +132,34 @@
         <receiver android:name=".widgets.DirectionReceiver" android:exported="true" android:label="Grunge · Direction Sign">
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_direction" />
+        </receiver>
+        <receiver android:name=".widgets.ClockGaugeReceiver" android:exported="true" android:label="Grunge · 4x2 Clock Gauges">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_clockgauge" />
+        </receiver>
+        <receiver android:name=".widgets.ClockBpmReceiver" android:exported="true" android:label="Grunge · 4x2 Clock BPM">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_clockbpm" />
+        </receiver>
+        <receiver android:name=".widgets.DigitalBigReceiver" android:exported="true" android:label="Grunge · 4x2 Digital Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_digital" />
+        </receiver>
+        <receiver android:name=".widgets.DockReceiver" android:exported="true" android:label="Grunge · 4x2 Dock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_dock" />
+        </receiver>
+        <receiver android:name=".widgets.CalcReceiver" android:exported="true" android:label="Grunge · 4x2 Calculator">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_calc" />
+        </receiver>
+        <receiver android:name=".widgets.PlaylistReceiver" android:exported="true" android:label="Grunge · 4x2 Playlist">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_playlist" />
+        </receiver>
+        <receiver android:name=".widgets.RingClockReceiver" android:exported="true" android:label="Grunge · 4x2 Ring Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_ringclock" />
         </receiver>
     </application>
 </manifest>
