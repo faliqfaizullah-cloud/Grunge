@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <queries>
+        <package android:name="com.spotify.music" />
+        <package android:name="com.google.android.apps.fitness" />
+        <package android:name="com.android.vending" />
+        <package android:name="com.google.android.apps.healthdata" />
+        <package android:name="com.google.android.deskclock" />
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <application android:name=".GrungeApp" android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher" android:theme="@style/Theme.Grunge">
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".MediaListener" android:exported="true" android:label="Grunge media"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter><action android:name="android.service.notification.NotificationListenerService" /></intent-filter>
+        </service>
+        <receiver android:name=".widgets.WeatherReceiver" android:exported="true" android:label="Grunge · Weather">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_weather" />
+        </receiver>
+        <receiver android:name=".widgets.BatteryReceiver" android:exported="true" android:label="Grunge · Battery">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_battery" />
+        </receiver>
+        <receiver android:name=".widgets.ClockReceiver" android:exported="true" android:label="Grunge · Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_clock" />
+        </receiver>
+        <receiver android:name=".widgets.YearReceiver" android:exported="true" android:label="Grunge · Year Progress">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_year" />
+        </receiver>
+        <receiver android:name=".widgets.QuoteReceiver" android:exported="true" android:label="Grunge · Quote">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_quote" />
+        </receiver>
+        <receiver android:name=".widgets.FlightReceiver" android:exported="true" android:label="Grunge · Next Flight">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_flight" />
+        </receiver>
+        <receiver android:name=".widgets.CityWeatherReceiver" android:exported="true" android:label="Grunge · Weather Text">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_cityweather" />
+        </receiver>
+        <receiver android:name=".widgets.MeetingReceiver" android:exported="true" android:label="Grunge · Meeting">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_meeting" />
+        </receiver>
+        <receiver android:name=".widgets.StopwatchReceiver" android:exported="true" android:label="Grunge · Stopwatch">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_stopwatch" />
+        </receiver>
+        <receiver android:name=".widgets.ProfileReceiver" android:exported="true" android:label="Grunge · Profile">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_profile" />
+        </receiver>
+        <receiver android:name=".widgets.ContactReceiver" android:exported="true" android:label="Grunge · Contact">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_contact" />
+        </receiver>
+        <receiver android:name=".widgets.DroneReceiver" android:exported="true" android:label="Grunge · Drone Battery">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_drone" />
+        </receiver>
+        <receiver android:name=".widgets.BalanceReceiver" android:exported="true" android:label="Grunge · Balance Card">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_balance" />
+        </receiver>
+        <receiver android:name=".widgets.UsdcReceiver" android:exported="true" android:label="Grunge · USDC">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_usdc" />
+        </receiver>
+        <receiver android:name=".widgets.MusicReceiver" android:exported="true" android:label="Grunge · Now Playing">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_music" />
+        </receiver>
+        <receiver android:name=".widgets.LampReceiver" android:exported="true" android:label="Grunge · Lamp">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_lamp" />
+        </receiver>
+        <receiver android:name=".widgets.SignOneAvReceiver" android:exported="true" android:label="Grunge · Sign 1 Av">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_sign1av" />
+        </receiver>
+        <receiver android:name=".widgets.SignUnionSqReceiver" android:exported="true" android:label="Grunge · Sign 14 St-Union Sq">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_signunion" />
+        </receiver>
+        <receiver android:name=".widgets.SignRawsonReceiver" android:exported="true" android:label="Grunge · Sign 33 St-Rawson St">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_signrawson" />
+        </receiver>
+        <receiver android:name=".widgets.SignOneZeroFourReceiver" android:exported="true" android:label="Grunge · Sign 104 St">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_sign104" />
+        </receiver>
+        <receiver android:name=".widgets.SignAlabamaReceiver" android:exported="true" android:label="Grunge · Sign Alabama Av">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_signalabama" />
+        </receiver>
+        <receiver android:name=".widgets.SignBronxReceiver" android:exported="true" android:label="Grunge · Sign 3 Av-149 St">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_sign149" />
+        </receiver>
+        <receiver android:name=".widgets.MetroCardReceiver" android:exported="true" android:label="Grunge · MetroCard">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_metrocard" />
+        </receiver>
+        <receiver android:name=".widgets.CreditReceiver" android:exported="true" android:label="Grunge · Add Credit">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_credit" />
+        </receiver>
+        <receiver android:name=".widgets.TicketReceiver" android:exported="true" android:label="Grunge · Single Ticket">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_ticket" />
+        </receiver>
+        <receiver android:name=".widgets.TypefaceReceiver" android:exported="true" android:label="Grunge · Typeface">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_typeface" />
+        </receiver>
+        <receiver android:name=".widgets.DirectionReceiver" android:exported="true" android:label="Grunge · Direction Sign">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_direction" />
+        </receiver>
+        <receiver android:name=".widgets.ClockGaugeReceiver" android:exported="true" android:label="Grunge · 4x2 Clock Gauges">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_clockgauge" />
+        </receiver>
+        <receiver android:name=".widgets.ClockBpmReceiver" android:exported="true" android:label="Grunge · 4x2 Clock BPM">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_clockbpm" />
+        </receiver>
+        <receiver android:name=".widgets.DigitalBigReceiver" android:exported="true" android:label="Grunge · 4x2 Digital Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_digital" />
+        </receiver>
+        <receiver android:name=".widgets.DockReceiver" android:exported="true" android:label="Grunge · 4x2 Dock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_dock" />
+        </receiver>
+        <receiver android:name=".widgets.CalcReceiver" android:exported="true" android:label="Grunge · 4x2 Calculator">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_calc" />
+        </receiver>
+        <receiver android:name=".widgets.PlaylistReceiver" android:exported="true" android:label="Grunge · 4x2 Playlist">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_playlist" />
+        </receiver>
+        <receiver android:name=".widgets.RingClockReceiver" android:exported="true" android:label="Grunge · 4x2 Ring Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_ringclock" />
+        </receiver>
+        <receiver android:name=".widgets.ScheduleReceiver" android:exported="true" android:label="Grunge · Schedule">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_schedule" />
+        </receiver>
+        <receiver android:name=".widgets.ScheduleTick" android:exported="false" />
+    </application>
+</manifest>
