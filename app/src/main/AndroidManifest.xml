@@ -166,5 +166,49 @@
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_schedule" />
         </receiver>
         <receiver android:name=".widgets.ScheduleTick" android:exported="false" />
+        <receiver android:name=".widgets.MonoClockReceiver" android:exported="true" android:label="Grunge · Mono Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_monoclock" />
+        </receiver>
+        <receiver android:name=".widgets.MonoWideReceiver" android:exported="true" android:label="Grunge · Mono Wide Clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_monowide" />
+        </receiver>
+        <receiver android:name=".widgets.DialTimeReceiver" android:exported="true" android:label="Grunge · Dial Time">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_dialtime" />
+        </receiver>
+        <receiver android:name=".widgets.ActivityReceiver" android:exported="true" android:label="Grunge · Activity 30d">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_activity" />
+        </receiver>
+        <receiver android:name=".widgets.RingsReceiver" android:exported="true" android:label="Grunge · Rings + Profile">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_rings" />
+        </receiver>
+        <receiver android:name=".widgets.GameReceiver" android:exported="true" android:label="Grunge · Score Game">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_game" />
+        </receiver>
+        <receiver android:name=".widgets.DomeReceiver" android:exported="true" android:label="Grunge · Weather Dome">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_dome" />
+        </receiver>
+        <receiver android:name=".widgets.BlobReceiver" android:exported="true" android:label="Grunge · Blue Glow">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_blob" />
+        </receiver>
+        <receiver android:name=".widgets.GreetingReceiver" android:exported="true" android:label="Grunge · Greeting">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_greeting" />
+        </receiver>
+        <receiver android:name=".widgets.PlayerReceiver" android:exported="true" android:label="Grunge · Player">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_player" />
+        </receiver>
+        <receiver android:name=".widgets.OrbitReceiver" android:exported="true" android:label="Grunge · Focus Dial">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/w_orbit" />
+        </receiver>
     </application>
 </manifest>

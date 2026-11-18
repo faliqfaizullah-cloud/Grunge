@@ -37,3 +37,14 @@ class DockReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: G
 class CalcReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = CalcWidget() }
 class PlaylistReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = PlaylistWidget() }
 class RingClockReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = RingClockWidget() }
+class MonoClockReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = MonoClockWidget() }
+class MonoWideReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = MonoWideWidget() }
+class DialTimeReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = DialTimeWidget() }
+class ActivityReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = ActivityWidget() }
+class RingsReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = RingsWidget() }
+class GameReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = GameWidget() }
+class DomeReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = DomeWidget() }
+class BlobReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = BlobWidget() }
+class GreetingReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = GreetingWidget() }
+class PlayerReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = PlayerWidget() }
+class OrbitReceiver : GlanceAppWidgetReceiver() { override val glanceAppWidget: GlanceAppWidget = OrbitWidget() }
